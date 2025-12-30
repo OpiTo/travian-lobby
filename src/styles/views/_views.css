@@ -1,0 +1,1975 @@
+@layer views {
+  #registrationFlowWrapper .step[data-step="email"] label {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  #registrationFlowWrapper .step[data-step="email"] label:not(.checkbox) .label {
+    color: #5e463a;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  #registrationFlowWrapper .step[data-step="email"] label.checkbox {
+    padding-bottom: 0;
+  }
+  #registrationFlowWrapper .step[data-step="email"] .accountExistsRedirect {
+    align-items: center;
+    animation: accountExistsAppear 0.15s ease-out forwards;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 0fr;
+    justify-content: center;
+    justify-self: center;
+    overflow: hidden;
+  }
+  @keyframes accountExistsAppear {
+    0% {
+      grid-template-rows: 0fr;
+      margin-bottom: 0;
+    }
+    to {
+      grid-template-rows: 1fr;
+      margin-bottom: 20px;
+    }
+  }
+  #registrationFlowWrapper .step[data-step="email"] .accountExistsRedirect svg.arrowCircleForward {
+    animation: redirectAnimation 1s cubic-bezier(0.29, 0.16, 0.73, 0.88) infinite;
+    fill: #5e463a;
+    height: 24px;
+    width: 24px;
+  }
+  @keyframes redirectAnimation {
+    0% {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  #registrationFlowWrapper .step[data-step="email"] .actions {
+    text-align: center;
+  }
+  #registrationFlowWrapper .step[data-step="email"] .actions > button,
+  #registrationFlowWrapper .step[data-step="email"] .actions > div:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label {
+    margin-block-end: 12px;
+    padding-block-end: 28px;
+    width: 100%;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label.checkbox,
+  #registrationFlowWrapper .step[data-step="activation"] label.invalid,
+  #registrationFlowWrapper .step[data-step="activation"] label.valid {
+    padding-block-end: 0;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label .digitsDisplay {
+    animation: digitsDisplayAppear 0.15s ease-out forwards;
+    display: grid;
+    grid-template-rows: 0fr;
+    margin-block-start: 0;
+    padding-inline-start: 15px;
+  }
+}
+@layer views {
+  @keyframes digitsDisplayAppear {
+    0% {
+      grid-template-rows: 0fr;
+      margin-block-start: 0;
+    }
+    to {
+      grid-template-rows: 1fr;
+      margin-block-start: 5px;
+    }
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label .digitsDisplay:not(.digitsMissing) {
+    color: #5e463a;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label .digitsDisplay.digitsMissing {
+    color: #d40000;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label .digitsDisplay ~ .validation.show {
+    grid-row-start: 4;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label.captchaWrapper {
+    grid-template-columns: auto;
+    justify-content: space-around;
+    margin-block-end: 20px;
+    pointer-events: auto;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label.captchaWrapper .gCaptcha {
+    margin-block-end: 0;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] label.captchaWrapper .validation {
+    color: #d40000;
+    min-height: 1.3em;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] .accountActivationExpired {
+    animation: accountActivationExpiredAppear 0.15s ease-out forwards;
+    display: grid;
+    grid-template-rows: 0fr;
+  }
+  @keyframes accountActivationExpiredAppear {
+    0% {
+      grid-template-rows: 0fr;
+      margin: 0;
+    }
+    to {
+      grid-template-rows: 1fr;
+      margin: 10px 0 20px;
+    }
+  }
+  #registrationFlowWrapper .step[data-step="activation"] .accountActivationExpired button {
+    justify-self: center;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] #recaptcha:not(:empty) {
+    display: grid;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] #recaptcha:not(:empty) > div {
+    animation: captchaAppear 0.15s ease-out forwards;
+    display: grid;
+    grid-template-rows: 0fr;
+    justify-self: center;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] #recaptcha:not(:empty) > div.dummyCaptcha {
+    background-color: #f0f;
+    color: #fff;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 200px;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] .actions {
+    text-align: center;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] .actions button,
+  #registrationFlowWrapper .step[data-step="activation"] .actions > div:not(:last-of-type) {
+    margin-block-end: 20px;
+  }
+  #registrationFlowWrapper .step[data-step="activation"] .actions button {
+    min-width: 230px;
+  }
+  #registrationFlowWrapper .step[data-step="password"] label {
+    margin-block-end: 12px;
+    padding-block-end: 0;
+    width: 100%;
+  }
+  #registrationFlowWrapper .step[data-step="password"] .actions {
+    text-align: center;
+  }
+  #registrationFlowWrapper .step[data-step="password"] .actions button {
+    margin-top: 20px;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .shuffleButton svg {
+    height: 17px;
+    width: 17px;
+  }
+  #registrationFlowWrapper .step[data-step="username"] label {
+    padding-block-end: 0;
+  }
+  #registrationFlowWrapper .step[data-step="username"] label input {
+    min-width: 0;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper {
+    align-items: end;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 55% 1fr;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .tagWrapper {
+    display: grid;
+    gap: 0 5px;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 23px auto;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .tagWrapper label {
+    grid-row: 1/3;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .tagWrapper > button,
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .tagWrapper > span {
+    align-self: center;
+    grid-row: 2;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules:last-of-type {
+    margin-inline-start: 12px;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules .evaluation {
+    align-content: center;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 15px 1fr;
+    position: relative;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules .evaluation:before {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 13px;
+    inset-block-start: 1px;
+    inset-inline-start: 1px;
+    position: absolute;
+    width: 13px;
+    z-index: 1;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules .evaluation svg {
+    fill: #a6a6a6;
+    height: 15px;
+    position: relative;
+    width: 15px;
+    z-index: 2;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules .evaluation.fulfilled svg {
+    fill: #228b22;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .usernameError {
+    color: #d40000;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .actions {
+    text-align: center;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .actions button {
+    margin-block-start: 20px;
+  }
+  #registrationFlowWrapper .step[data-step="username"] .mobileOnly,
+  #registrationFlowWrapper .step[data-step="username"] .shuffleMobile {
+    display: none;
+  }
+}
+@layer views {
+}
+@layer views {
+  @media screen and (max-width: 500px) {
+    #registrationFlowWrapper .step[data-step="username"] .mobileOnly {
+      display: inline-block;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .nameWrapper .tagWrapper {
+      grid-template-columns: auto 1fr;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .nameWrapper .tagWrapper .shuffleButton {
+      display: none;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules {
+      grid-column: 1/3;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules:last-of-type {
+      margin-inline-start: 0;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .nameWrapper .characterRules .mobileOnly {
+      font-weight: 700;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .shuffleMobile {
+      align-items: center;
+      display: grid;
+      gap: 5px;
+      grid-column: 1/3;
+      grid-template-columns: auto auto;
+      margin: 10px 0;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .shuffleMobile > span {
+      justify-self: end;
+    }
+    #registrationFlowWrapper .step[data-step="username"] .shuffleMobile > button {
+      justify-self: start;
+    }
+  }
+}
+@layer views {
+  #registrationFlowWrapper .step[data-step="success"] .stepWrapper {
+    display: inline-grid;
+    justify-items: center;
+    text-align: center;
+  }
+  #registrationFlowWrapper .step[data-step="success"] .logoLobbyAccount {
+    height: 80px;
+    margin-block-start: 20px;
+  }
+  #registrationFlowWrapper .step[data-step="success"] .logoLobbyAccount path {
+    fill: #5e463a;
+  }
+  #registrationFlowWrapper .step[data-step="success"] h1 {
+    --fontSize: 24px;
+    line-height: 1em;
+    margin-inline-end: 0;
+  }
+  #registrationFlowWrapper .step[data-step="success"] .successIconLarge {
+    fill: #228b22;
+    height: 60px;
+    width: 60px;
+  }
+  #registrationFlowWrapper .step[data-step="success"] .playButton {
+    margin-block-start: 20px;
+  }
+  #registrationFlowWrapper .step[data-step="success"] .playButton div {
+    overflow: hidden;
+  }
+  #registrationFlowWrapper .step[data-step="success"] .playButton div:before {
+    animation: playButtonAnimation 5s ease-in-out 1s infinite;
+    background: linear-gradient(
+      calc(90deg * var(--scaleXFactor)),
+      #fff0 0,
+      #ffffff08 1%,
+      #fff9 30%,
+      #ffffffd9 50%,
+      #ffffffd9 70%,
+      #ffffffd9 71%,
+      #fff0 100%
+    );
+    content: "";
+    height: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-150%) skew(-33deg, 0);
+    width: 30%;
+    z-index: 5;
+  }
+  @keyframes playButtonAnimation {
+    0% {
+      transform: translateX(calc(-150% * var(--scaleXFactor))) skew(-33deg, 0);
+    }
+    33%,
+    to {
+      transform: translateX(calc(400% * var(--scaleXFactor))) skew(-33deg, 0);
+    }
+  }
+}
+@layer views {
+  #gameworldCalendar {
+    container: calendarGrid/inline-size;
+    min-width: auto;
+  }
+  #gameworldCalendar .noResults {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0 auto;
+    margin-block-start: 150px;
+  }
+  #gameworldCalendar .calendarGameworld ~ h2 {
+    margin-block-start: 20px;
+  }
+  .gameworldDetails i.serverStart {
+    --iconUrl: url(/assets/icon-server-start.png);
+    --iconWidth: 32px;
+    --iconHeight: 32px;
+  }
+  .gameworldDetails i.speed {
+    --iconUrl: url(/assets/icon-speed.png);
+    --iconWidth: 32px;
+    --iconHeight: 32px;
+  }
+  .gameworldDetails i.artefacts {
+    --iconUrl: url(/assets/icon-artefacts.png);
+    --iconWidth: 32px;
+    --iconHeight: 32px;
+  }
+  .gameworldDetails i.constructionPlans {
+    --iconUrl: url(/assets/icon-construction-plans.png);
+    --iconWidth: 32px;
+    --iconHeight: 32px;
+  }
+  .gameworldDetails i.serverEnd {
+    --iconUrl: url(/assets/icon-server-end.png);
+    --iconWidth: 32px;
+    --iconHeight: 32px;
+  }
+  .gameworldDetails i.ww {
+    --iconUrl: url(/assets/icon-ww.png);
+    --iconWidth: 32px;
+    --iconHeight: 32px;
+  }
+  .gameworldDetails .tag {
+    background-image: var(--backgroundGradient, none);
+    border: 1px solid var(--borderColor, #0000);
+  }
+  .gameworldDetails .tag.special {
+    --borderColor: #a200e2;
+    --backgroundColor: #a200e280;
+    --backgroundDetailFrom: #a200e299;
+    --backgroundDetailTo: #a200e20d;
+  }
+  .gameworldDetails .tag.inviteOnly {
+    --borderColor: #af823f;
+    --backgroundColor: #af823f80;
+    --backgroundDetailFrom: #af823fe6;
+    --backgroundDetailTo: #af823f0d;
+  }
+  .gameworldDetails .tag.mobileOnly {
+    --borderColor: #00c8ff;
+    --backgroundColor: #00c8ff80;
+    --backgroundDetailFrom: #00c8ffb3;
+    --backgroundDetailTo: #00c8ff0d;
+  }
+  .gameworldDetails .tag i.special {
+    background-image: url(/assets/tag-special.png);
+    height: 40px;
+    width: 38px;
+  }
+  .gameworldDetails .tag i.inviteOnly {
+    background-image: url(/assets/tag-invite-only.png);
+    height: 40px;
+    width: 38px;
+  }
+  .gameworldDetails .tag i.mobileOnly {
+    background-image: url(/assets/tag-mobile-only.png);
+    height: 40px;
+    width: 40px;
+  }
+  .calendarGameworld {
+    background-image: linear-gradient(180deg, #312c2cd9, #1a1e1fd9);
+    border: 1px solid #cba467;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #00000080;
+    display: grid;
+    font-size: 18px;
+    grid-template-columns: 50px 1fr 94px 220px 156px repeat(3, 116px) 70px;
+    grid-template-rows: 50px;
+    margin-block-end: 10px;
+    pointer-events: none;
+    position: relative;
+    transition-duration: 0.15s;
+  }
+  .calendarGameworld.notification:after {
+    border: 1px solid #ff4e00;
+    border-end-start-radius: 7px;
+    border-start-start-radius: 7px;
+    box-shadow: inset 0 0 7px #ff4e00;
+    content: "";
+    inset-block: -1px;
+    inset-inline: -1px 70px;
+    position: absolute;
+  }
+  .calendarGameworld > * {
+    align-content: center;
+    font-weight: 700;
+    justify-self: stretch;
+    text-align: center;
+    transition-duration: 0.15s;
+  }
+  .calendarGameworld > :not(:first-child) {
+    border-inline-start: 1px solid #cba467;
+  }
+  .calendarGameworld .day {
+    display: grid;
+    line-height: 1em;
+    padding-block-end: 4px;
+  }
+  .calendarGameworld .day .weekday {
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .calendarGameworld .day.active {
+    background-image: linear-gradient(90deg, #00bc0080, #0000);
+    border: 1px solid #228b22;
+    border-end-start-radius: 6px;
+    border-inline-end: none;
+    border-start-start-radius: 6px;
+  }
+  .calendarGameworld .title {
+    align-items: center;
+    border-inline-end: none;
+    display: grid;
+    gap: 4%;
+    grid-auto-flow: column;
+    padding-inline: 0.85em;
+    position: relative;
+    text-align: start;
+    text-transform: uppercase;
+    --backgroundGradient: linear-gradient(90deg, var(--backgroundColor), #0000);
+  }
+  .calendarGameworld .title .text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .calendarGameworld .title .name {
+    white-space: nowrap;
+  }
+}
+@layer views {
+  .calendarGameworld .title .name:has(~ span) {
+    border-inline-end: 1px solid currentColor;
+    display: inline-block;
+    margin-inline-end: 5px;
+    padding-inline-end: 5px;
+  }
+  .calendarGameworld .title .name ~ span {
+    font-style: italic;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .calendarGameworld .title i {
+    justify-self: end;
+  }
+  .calendarGameworld .tribes {
+    display: grid;
+    overflow: hidden;
+    place-content: center;
+  }
+  .calendarGameworld .tribeImages {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    height: 70px;
+    margin-block-start: 15px;
+    margin-inline-start: -5px;
+    transform: scale(0.75);
+  }
+  .calendarGameworld .tribeImages .tribe {
+    filter: brightness(1.2);
+    margin-inline-start: var(--decreaseGap);
+    position: relative;
+    --decreaseGap: -20px;
+  }
+  .calendarGameworld .tribeImages .tribe:first-child {
+    --decreaseGap: 0px;
+    z-index: 6;
+  }
+  .calendarGameworld .tribeImages .tribe:nth-child(2) {
+    z-index: 5;
+  }
+  .calendarGameworld .tribeImages .tribe:nth-child(3) {
+    z-index: 4;
+  }
+  .calendarGameworld .tribeImages .tribe:nth-child(4) {
+    z-index: 3;
+  }
+  .calendarGameworld .tribeImages .tribe:nth-child(5) {
+    z-index: 2;
+  }
+  .calendarGameworld .tribeImages .tribe:nth-child(6) {
+    z-index: 1;
+  }
+  .calendarGameworld .tribeImages .roman + .gaul {
+    --decreaseGap: -25px;
+  }
+  .calendarGameworld .tribeImages .teuton {
+    --decreaseGap: -35px;
+  }
+  .calendarGameworld .tribeImages .hun,
+  .calendarGameworld .tribeImages .spartan {
+    --decreaseGap: -25px;
+  }
+  .calendarGameworld .tribeImages .viking {
+    --decreaseGap: -30px;
+  }
+  .calendarGameworld .tribeImages .roman {
+    background-image: url(/assets/tribe-roman.png);
+    height: 79px;
+    width: 75px;
+  }
+  .calendarGameworld .tribeImages .teuton {
+    background-image: url(/assets/tribe-teuton.png);
+    height: 75px;
+    width: 76px;
+  }
+  .calendarGameworld .tribeImages .gaul {
+    background-image: url(/assets/tribe-gaul.png);
+    height: 84px;
+    width: 64px;
+  }
+  .calendarGameworld .tribeImages .egyptian {
+    background-image: url(/assets/tribe-egyptian.png);
+    height: 81px;
+    width: 52px;
+  }
+  .calendarGameworld .tribeImages .hun {
+    background-image: url(/assets/tribe-hun.png);
+    height: 76px;
+    width: 71px;
+  }
+  .calendarGameworld .tribeImages .spartan {
+    background-image: url(/assets/tribe-spartan.png);
+    height: 85px;
+    width: 60px;
+  }
+  .calendarGameworld .tribeImages .viking {
+    background-image: url(/assets/tribe-viking.png);
+    height: 79px;
+    width: 67px;
+  }
+  .calendarGameworld .artefacts,
+  .calendarGameworld .constructionPlans,
+  .calendarGameworld .endCondition,
+  .calendarGameworld .speed,
+  .calendarGameworld .startTime {
+    align-items: center;
+    display: grid;
+    font-size: 16px;
+    gap: 8px;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    padding-inline: 10px;
+    white-space: nowrap;
+  }
+  .calendarGameworld .artefacts i,
+  .calendarGameworld .constructionPlans i,
+  .calendarGameworld .endCondition i,
+  .calendarGameworld .speed i,
+  .calendarGameworld .startTime i {
+    background-image: var(--iconUrl);
+    height: var(--iconHeight);
+    width: var(--iconWidth);
+  }
+  .calendarGameworld .artefacts span,
+  .calendarGameworld .constructionPlans span,
+  .calendarGameworld .endCondition span,
+  .calendarGameworld .speed span,
+  .calendarGameworld .startTime span {
+    white-space: nowrap;
+  }
+  .calendarGameworld .startTime div {
+    justify-self: start;
+  }
+  .calendarGameworld .startTime span {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .calendarGameworld button.action {
+    border-end-end-radius: 6px;
+    border-start-end-radius: 6px;
+    --fontColor: #fff9eb;
+    --buttonGradientColorTop: #5d8137;
+    --buttonGradientColorBottom: #466428;
+    background-image: linear-gradient(to bottom, var(--buttonGradientColorTop), var(--buttonGradientColorBottom));
+    border-block: none;
+    border-inline-end: none;
+    pointer-events: auto;
+  }
+  .calendarGameworld button.action:before {
+    content: none;
+  }
+  .calendarGameworld button.action:hover:not(:active) {
+    --buttonGradientColorTop: #84b253;
+    --buttonGradientColorBottom: #5a8133;
+  }
+  .calendarGameworld button.action:active {
+    --buttonGradientColorTop: #466428;
+    --buttonGradientColorBottom: #5d8137;
+  }
+  .calendarGameworld button.action svg {
+    min-height: 1em;
+  }
+  .calendarGameworld button.action > div {
+    padding-inline: var(--buttonPadding);
+  }
+  @container calendarGrid (width < 1300px) {
+    .calendarGameworld {
+      grid-template-columns: 50px 1fr 94px 220px 156px repeat(2, 116px) 70px;
+    }
+    .calendarGameworld .endCondition {
+      display: none;
+    }
+  }
+  @container calendarGrid (width < 1185px) {
+    .calendarGameworld {
+      grid-template-columns: 50px 1fr 94px 220px 156px 116px 70px;
+    }
+    .calendarGameworld .constructionPlans {
+      display: none;
+    }
+  }
+  @container calendarGrid (width < 1069px) {
+    .calendarGameworld {
+      grid-template-columns: 50px 1fr clamp(70px, 8cqi, 90px) 200px clamp(120px, 15cqi, 156px) 70px;
+    }
+    .calendarGameworld .tribeImages {
+      transform: scale(0.75);
+    }
+    .calendarGameworld .speed,
+    .calendarGameworld .startTime {
+      gap: 0.3em;
+    }
+    .calendarGameworld .speed i,
+    .calendarGameworld .startTime i {
+      zoom: 0.8;
+    }
+    .calendarGameworld .artefacts {
+      display: none;
+    }
+  }
+  @container calendarGrid (width < 913px) {
+    .calendarGameworld {
+      font-size: clamp(13px, 2cqi, 18px);
+      grid-template-columns: clamp(38px, 6cqi, 50px) 1fr clamp(70px, 10cqi, 90px) 175px clamp(40px, 8cqi, 70px);
+      grid-template-rows: clamp(40px, 6cqi, 50px);
+    }
+    .calendarGameworld.notification:after {
+      inset-inline-end: clamp(40px, 8cqi, 70px);
+    }
+    .calendarGameworld .day .weekday {
+      font-size: clamp(8px, 1.2cqi, 10px);
+    }
+    .calendarGameworld .speed {
+      gap: 0.2em;
+      padding-inline: 0.4em;
+    }
+    .calendarGameworld .tribeImages {
+      transform: scale(0.65);
+    }
+    .calendarGameworld .startTime {
+      display: none;
+    }
+  }
+  @container calendarGrid (width < 800px) {
+    .calendarGameworld {
+      grid-template-columns: clamp(38px, 6cqi, 50px) 1fr 70px 155px clamp(40px, 8cqi, 70px);
+    }
+    .calendarGameworld .title i {
+      zoom: 0.8;
+    }
+    .calendarGameworld .tribeImages {
+      transform: scale(0.55);
+    }
+  }
+  @container calendarGrid (width < 700px) {
+    .calendarGameworld {
+      grid-template-columns: clamp(38px, 6cqi, 50px) 1fr 60px 140px clamp(40px, 8cqi, 70px);
+    }
+    .calendarGameworld .tribeImages {
+      margin-block-start: 10px;
+      transform: scale(0.45);
+    }
+  }
+  @container calendarGrid (width < 600px) {
+    .calendarGameworld {
+      grid-template-columns: clamp(38px, 6cqi, 50px) 1fr 35px 140px clamp(40px, 8cqi, 70px);
+    }
+    .calendarGameworld .speed {
+      display: inline-block;
+      padding-inline: 0;
+    }
+    .calendarGameworld .speed i {
+      display: none;
+    }
+  }
+  @container calendarGrid (width < 500px) {
+    .calendarGameworld {
+      cursor: pointer;
+      grid-template-columns: clamp(38px, 6cqi, 50px) 1fr 32px 95px;
+      pointer-events: auto;
+    }
+    .calendarGameworld .title {
+      padding-inline: 0.3em;
+    }
+    .calendarGameworld .title .text .name {
+      border: none;
+    }
+    .calendarGameworld .title .text span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .calendarGameworld .title i {
+      zoom: 0.7;
+    }
+    .calendarGameworld .tribeImages {
+      margin-inline-start: 0;
+      transform: scale(0.35);
+    }
+    .calendarGameworld .action {
+      display: none;
+    }
+    .calendarGameworld.notification:after {
+      border-radius: 7px;
+      inset-inline-end: -1px;
+    }
+  }
+}
+@layer views {
+  .calendarGameworldPreviewContainer {
+    container: calendarGameworldPreviewContainer/inline-size;
+  }
+  .calendarGameworldPreview {
+    --columnGap: 5px;
+    --rowGap: 10px;
+    --marginInline: 5px;
+    --infoBoxBackgroundColorStart: #312c2cd9;
+    --infoBoxBackgroundColorEnd: #1a1e1fd9;
+    background-image: linear-gradient(180deg, var(--infoBoxBackgroundColorStart), var(--infoBoxBackgroundColorEnd));
+    border: 2px solid #cba467;
+    box-shadow: 2px 2px 6px 0 #0000004d;
+    display: grid;
+    gap: var(--rowGap) var(--columnGap);
+    grid-template-columns: auto 1fr auto 140px;
+    grid-template-rows: 1fr 50px;
+    height: 100%;
+    position: relative;
+  }
+  .calendarGameworldPreview h3 {
+    align-self: center;
+    grid-column: 1/-1;
+    justify-self: start;
+    margin-block: 0;
+    margin-inline: var(--marginInline);
+    padding-inline: calc(var(--columnGap) * 2);
+  }
+  .calendarGameworldPreview > * {
+    align-content: center;
+    font-weight: 700;
+    justify-self: start;
+    padding-inline-end: var(--columnGap);
+    padding-inline-start: calc(var(--columnGap) * 2);
+    text-align: center;
+    transition-duration: 0.15s;
+  }
+  .calendarGameworldPreview > :not(:first-of-type) {
+    border-image-repeat: repeat;
+    border-image-slice: 0 0 0 1;
+    border-image-source: linear-gradient(#0000, var(--fontColor));
+    border-image-width: auto;
+  }
+  .calendarGameworldPreview .day {
+    margin-inline-start: var(--marginInline);
+  }
+  .calendarGameworldPreview .title {
+    align-items: center;
+    display: grid;
+    gap: 4%;
+    grid-auto-flow: row;
+    position: relative;
+    text-align: start;
+    text-transform: uppercase;
+  }
+  .calendarGameworldPreview .title .name,
+  .calendarGameworldPreview .title .subtitle,
+  .calendarGameworldPreview .title .text {
+    overflow: hidden;
+  }
+  .calendarGameworldPreview .title .name,
+  .calendarGameworldPreview .title .subtitle {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .calendarGameworldPreview .title .subtitle {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .calendarGameworldPreview .tribes {
+    display: grid;
+    justify-self: stretch;
+    overflow: hidden;
+    place-content: center;
+  }
+  .calendarGameworldPreview .tribeImages {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    height: 70px;
+    margin-block-start: 10px;
+    margin-inline-start: 0;
+    transform: scale(0.45);
+  }
+  .calendarGameworldPreview .tribeImages .tribe {
+    filter: brightness(1.2);
+    margin-inline-start: var(--decreaseGap);
+    position: relative;
+    --decreaseGap: -20px;
+  }
+  .calendarGameworldPreview .tribeImages .tribe:first-child {
+    --decreaseGap: 0px;
+    z-index: 6;
+  }
+  .calendarGameworldPreview .tribeImages .tribe:nth-child(2) {
+    z-index: 5;
+  }
+  .calendarGameworldPreview .tribeImages .tribe:nth-child(3) {
+    z-index: 4;
+  }
+  .calendarGameworldPreview .tribeImages .tribe:nth-child(4) {
+    z-index: 3;
+  }
+  .calendarGameworldPreview .tribeImages .tribe:nth-child(5) {
+    z-index: 2;
+  }
+  .calendarGameworldPreview .tribeImages .tribe:nth-child(6) {
+    z-index: 1;
+  }
+  .calendarGameworldPreview .tribeImages .roman + .gaul {
+    --decreaseGap: -25px;
+  }
+  .calendarGameworldPreview .tribeImages .teuton {
+    --decreaseGap: -35px;
+  }
+  .calendarGameworldPreview .tribeImages .hun,
+  .calendarGameworldPreview .tribeImages .spartan {
+    --decreaseGap: -25px;
+  }
+  .calendarGameworldPreview .tribeImages .viking {
+    --decreaseGap: -30px;
+  }
+  .calendarGameworldPreview .tribeImages .roman {
+    background-image: url(/assets/tribe-roman.png);
+    height: 79px;
+    width: 75px;
+  }
+  .calendarGameworldPreview .tribeImages .teuton {
+    background-image: url(/assets/tribe-teuton.png);
+    height: 75px;
+    width: 76px;
+  }
+  .calendarGameworldPreview .tribeImages .gaul {
+    background-image: url(/assets/tribe-gaul.png);
+    height: 84px;
+    width: 64px;
+  }
+  .calendarGameworldPreview .tribeImages .egyptian {
+    background-image: url(/assets/tribe-egyptian.png);
+    height: 81px;
+    width: 52px;
+  }
+  .calendarGameworldPreview .tribeImages .hun {
+    background-image: url(/assets/tribe-hun.png);
+    height: 76px;
+    width: 71px;
+  }
+  .calendarGameworldPreview .tribeImages .spartan {
+    background-image: url(/assets/tribe-spartan.png);
+    height: 85px;
+    width: 60px;
+  }
+  .calendarGameworldPreview .tribeImages .viking {
+    background-image: url(/assets/tribe-viking.png);
+    height: 79px;
+    width: 67px;
+  }
+  @container calendarGameworldPreviewContainer (width < 385px) {
+    .calendarGameworldPreview {
+      --columnGap: 3px;
+      --rowGap: 0;
+      grid-template-columns: auto 1fr auto 95px;
+      grid-template-rows: 1fr 40px;
+      height: 80px;
+    }
+    .calendarGameworldPreview .tribeImages {
+      margin-inline-start: 0;
+      transform: scale(0.35);
+    }
+  }
+  @container calendarGameworldPreviewContainer (width < 308px) {
+    .calendarGameworldPreview {
+      grid-template-columns: auto 1fr auto;
+    }
+    .calendarGameworldPreview .speed {
+      margin-inline-end: var(--marginInline);
+    }
+    .calendarGameworldPreview .tribes {
+      display: none;
+    }
+  }
+}
+@layer views {
+  #calendarGameworldDetails {
+    container: calendarGameworldDetails/inline-size;
+    height: 140px;
+    height: auto;
+    padding: 0;
+    width: 475px;
+  }
+  #calendarGameworldDetails .header {
+    height: 140px;
+    width: 475px;
+    --fontColor: #fffdf8;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    --textShadow: drop-shadow(0 0 3px #1f1f1f99);
+    container-name: gameworld;
+    container-type: inline-size;
+  }
+  @container calendarGameworldDetails (width < 473px) {
+    #calendarGameworldDetails .header {
+      width: 100%;
+    }
+  }
+  #calendarGameworldDetails .header .background {
+    inset: 0;
+    position: absolute;
+    transform: scaleX(var(--scaleXFactor));
+    z-index: 2;
+  }
+  #calendarGameworldDetails .header .background.default {
+    --serverImage: url(/assets/bg-default.jpg);
+  }
+  #calendarGameworldDetails .header .background.defaultSpeed {
+    --serverImage: url(/assets/bg-default-speed.jpg);
+  }
+  #calendarGameworldDetails .header .background.newYearsSpecial {
+    --serverImage: url(/assets/bg-new-years-special.jpg);
+  }
+  #calendarGameworldDetails .header .background.final {
+    --serverImage: url(/assets/bg-final.jpg);
+  }
+  #calendarGameworldDetails .header .background.domainSpecial {
+    --serverImage: url(/assets/bg-domain-special.jpg);
+  }
+  #calendarGameworldDetails .header .background.tidesOfConquest {
+    --serverImage: url(/assets/bg-tides-of-conquest.jpg);
+  }
+  #calendarGameworldDetails .header .background.gloryOfSparta {
+    --serverImage: url(/assets/bg-glory-of-sparta.jpg);
+  }
+  #calendarGameworldDetails .header .background.codexVictoria {
+    --serverImage: url(/assets/bg-codex-victoria.jpg);
+  }
+  #calendarGameworldDetails .header .background.shoresOfWar {
+    --serverImage: url(/assets/bg-shores-of-war.jpg);
+  }
+  #calendarGameworldDetails .header .background.ptr {
+    --serverImage: url(/assets/bg-ptr.jpg);
+  }
+  #calendarGameworldDetails .header .background.northernLegends {
+    --serverImage: url(/assets/bg-northern-legends.jpg);
+  }
+  #calendarGameworldDetails .header .background.newYearSpecial2025 {
+    --serverImage: url(/assets/bg-new-year-special-2025.jpg);
+  }
+  #calendarGameworldDetails .header .background.reignOfFire {
+    --serverImage: url(/assets/bg-reign-of-fire.jpg);
+  }
+  #calendarGameworldDetails .header .background:after,
+  #calendarGameworldDetails .header .background:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
+  #calendarGameworldDetails .header .background:before {
+    background-color: #f5e8c8;
+    inset: 0;
+  }
+  #calendarGameworldDetails .header .background:after {
+    background-image: var(--serverImage);
+    background-position: top;
+    opacity: 0.7;
+  }
+  #calendarGameworldDetails .header .content {
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr 1fr;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+  }
+  #calendarGameworldDetails .header .content > :not(button) {
+    text-shadow: 1px 0 0 #1f1f1fcc, 1px 1px 0 #1f1f1fcc, 0 1px 0 #1f1f1fcc, -1px 1px 0 #1f1f1fcc, -1px 0 0 #1f1f1fcc,
+      -1px -1px 0 #1f1f1fcc, 0 -1px 0 #1f1f1fcc, 1px -1px 0 #1f1f1fcc;
+  }
+  #calendarGameworldDetails .header .content .title {
+    align-self: start;
+    display: grid;
+    filter: var(--textShadow);
+    grid-column-start: 1;
+    grid-row: 1/3;
+    grid-template-rows: repeat(3, auto);
+    margin-block-start: 12px;
+    margin-inline-start: 12px;
+  }
+  #calendarGameworldDetails .header .content .title .gameworldName {
+    letter-spacing: 0.1em;
+  }
+  #calendarGameworldDetails .header .content .title .subtitle {
+    font-size: 0.8em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  #calendarGameworldDetails .header .content .title .gameworldName,
+  #calendarGameworldDetails .header .content .title .subtitle {
+    text-transform: uppercase;
+  }
+  #calendarGameworldDetails .header .content .tribes {
+    align-self: end;
+    display: grid;
+    grid-column-start: 1;
+    grid-row: 2/4;
+    grid-template-columns: repeat(6, auto);
+    height: 70px;
+    justify-self: start;
+    transition-duration: 0.15s;
+  }
+  #calendarGameworldDetails .header .content .tribes .tribe {
+    filter: drop-shadow(0 0 2px white) brightness(1.2);
+    margin-inline-start: var(--decreaseGap);
+    position: relative;
+    --decreaseGap: -15px;
+  }
+  #calendarGameworldDetails .header .content .tribes .tribe:first-child {
+    --decreaseGap: 0px;
+    z-index: 6;
+  }
+  #calendarGameworldDetails .header .content .tribes .tribe:nth-child(2) {
+    z-index: 5;
+  }
+  #calendarGameworldDetails .header .content .tribes .tribe:nth-child(3) {
+    z-index: 4;
+  }
+  #calendarGameworldDetails .header .content .tribes .tribe:nth-child(4) {
+    z-index: 3;
+  }
+  #calendarGameworldDetails .header .content .tribes .tribe:nth-child(5) {
+    z-index: 2;
+  }
+  #calendarGameworldDetails .header .content .tribes .tribe:nth-child(6) {
+    z-index: 1;
+  }
+  #calendarGameworldDetails .header .content .tribes .roman + .gaul {
+    --decreaseGap: -20px;
+  }
+  #calendarGameworldDetails .header .content .tribes .teuton {
+    --decreaseGap: -30px;
+  }
+  #calendarGameworldDetails .header .content .tribes .hun,
+  #calendarGameworldDetails .header .content .tribes .spartan {
+    --decreaseGap: -20px;
+  }
+  #calendarGameworldDetails .header .content .tribes .viking {
+    --decreaseGap: -25px;
+  }
+  #calendarGameworldDetails .header .content .tribes .roman {
+    background-image: url(/assets/tribe-roman.png);
+    height: 79px;
+    width: 75px;
+  }
+  #calendarGameworldDetails .header .content .tribes .teuton {
+    background-image: url(/assets/tribe-teuton.png);
+    height: 75px;
+    width: 76px;
+  }
+  #calendarGameworldDetails .header .content .tribes .gaul {
+    background-image: url(/assets/tribe-gaul.png);
+    height: 84px;
+    width: 64px;
+  }
+  #calendarGameworldDetails .header .content .tribes .egyptian {
+    background-image: url(/assets/tribe-egyptian.png);
+    height: 81px;
+    width: 52px;
+  }
+  #calendarGameworldDetails .header .content .tribes .hun {
+    background-image: url(/assets/tribe-hun.png);
+    height: 76px;
+    width: 71px;
+  }
+  #calendarGameworldDetails .header .content .tribes .spartan {
+    background-image: url(/assets/tribe-spartan.png);
+    height: 85px;
+    width: 60px;
+  }
+  #calendarGameworldDetails .header .content .tribes .viking {
+    background-image: url(/assets/tribe-viking.png);
+    height: 79px;
+    width: 67px;
+  }
+  #calendarGameworldDetails .gameworld {
+    z-index: 1;
+  }
+  #calendarGameworldDetails section.indeterminate {
+    align-items: center;
+    background-color: #bacff099;
+    border: 1px solid #2e80fb;
+    border-radius: 3px;
+    display: grid;
+    gap: 0 10px;
+    grid-template-columns: auto 1fr;
+    margin: 15px;
+    padding: 10px;
+  }
+  #calendarGameworldDetails section.indeterminate svg {
+    fill: #2e80fb;
+    height: 20px;
+    width: 20px;
+  }
+  #calendarGameworldDetails section.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: var(--modalPadding);
+  }
+  #calendarGameworldDetails section.details.hasAction {
+    border-block-end: 1px solid #67543b;
+  }
+  #calendarGameworldDetails section.details > div {
+    align-items: center;
+    column-gap: 10px;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+    padding-block: 10px;
+  }
+  #calendarGameworldDetails section.details > div:not(.tagList) i:not(.flag) {
+    background-image: var(--iconUrl);
+    height: var(--iconHeight);
+    width: var(--iconWidth);
+  }
+  #calendarGameworldDetails section.details > div span strong {
+    display: block;
+  }
+  #calendarGameworldDetails section.details > div span strong span {
+    font-style: italic;
+    font-weight: 400;
+  }
+  #calendarGameworldDetails section.details > div:nth-child(odd) {
+    padding-inline-end: 10px;
+  }
+  #calendarGameworldDetails section.details > div:nth-child(2n) {
+    padding-inline-start: 10px;
+  }
+  #calendarGameworldDetails section.details > div:nth-child(n + 3) {
+    border-block-start: 1px solid #67543b;
+  }
+  #calendarGameworldDetails section.details .endCondition {
+    grid-column: 1 / span 2;
+  }
+  #calendarGameworldDetails section.details .gameworldLanguages,
+  #calendarGameworldDetails section.details .tagList {
+    grid-column: 1 / span 2;
+    width: 445px;
+  }
+  #calendarGameworldDetails section.details .gameworldLanguages {
+    padding-inline: 3px;
+  }
+  #calendarGameworldDetails section.details .gameworldLanguages .flags {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  #calendarGameworldDetails section.details .gameworldLanguages .flags i {
+    border: 1px solid #1f1f1f;
+    border-radius: 4px;
+    height: 16px;
+    width: 20px;
+  }
+  #calendarGameworldDetails section.details > div.tagList {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    padding-inline: 0;
+  }
+  #calendarGameworldDetails section.details .tag {
+    --backgroundGradient: linear-gradient(90deg, var(--backgroundDetailFrom), var(--backgroundDetailTo));
+    align-items: center;
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+    padding: 5px;
+  }
+  #calendarGameworldDetails section.details .tag i {
+    flex-shrink: 0;
+  }
+  @container calendarGameworldDetails (width < 473px) {
+    #calendarGameworldDetails section.details {
+      grid-template-columns: 1fr;
+    }
+    #calendarGameworldDetails section.details > div {
+      grid-column-end: 2;
+      padding-inline: 10px;
+    }
+    #calendarGameworldDetails section.details > div:not(:first-child) {
+      border-block-start: 1px solid #67543b;
+    }
+    #calendarGameworldDetails section.details > div.gameworldLanguages,
+    #calendarGameworldDetails section.details > div.tagList {
+      grid-auto-flow: row;
+      grid-template-columns: 1fr;
+      row-gap: 5px;
+      width: auto;
+    }
+  }
+  #calendarGameworldDetails section.action {
+    margin-block-end: var(--modalPadding);
+    text-align: center;
+  }
+  #calendarGameworldDetails section.action form {
+    padding: 0 var(--modalPadding);
+  }
+  #calendarGameworldDetails section.action form label {
+    margin-block-end: 12px;
+    text-align: start;
+    width: 100%;
+  }
+  #calendarGameworldDetails section.action p:not(.cooldown) {
+    padding: 0 var(--modalPadding);
+    text-align: start;
+  }
+  #errorSocialWrapper .actions,
+  #errorSocialWrapper .helpHint {
+    text-align: center;
+  }
+  #errorSocialWrapper .actions {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-block: 25px;
+  }
+  #errorSocialWrapper .actions:last-child {
+    margin-block-end: 0;
+  }
+}
+@layer views {
+}
+@layer views {
+  #news.newsPreviewView {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  #news.newsPreviewView h1 {
+    grid-column: 1/-1;
+  }
+  #news.newsPreviewView .buttonWrapper {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  #news.newsPreviewView .buttonWrapper button.loadMore div {
+    padding-inline: calc(var(--pagePadding) * 1.5);
+  }
+  @media screen and (max-width: 1112px) {
+    #news.newsPreviewView {
+      gap: 3vw;
+      grid-template-columns: 1fr;
+      max-width: 800px;
+    }
+    #news.newsPreviewView .newsPreviewContainer {
+      max-width: 800px;
+    }
+  }
+  #news.newsArticleView {
+    position: relative;
+  }
+  #news.newsArticleView button.back {
+    --translate: translateX(0);
+  }
+  #news.newsArticleView button.back svg {
+    stroke: currentColor;
+    transform: var(--translate) rotate(calc(90deg * var(--scaleXFactor)));
+    transition: transform 0.2s ease-out 0.1s;
+    width: 1em;
+  }
+  #news.newsArticleView button.back:hover {
+    --translate: translateX(calc(-2px * var(--scaleXFactor)));
+  }
+  .newsPreviewContainer {
+    container: newsPreviewContainer/inline-size;
+  }
+  .newsPreview {
+    --columnGap: 20px;
+    --rowGap: 10px;
+    --infoBoxBackgroundColorStart: #312c2cd9;
+    --infoBoxBackgroundColorEnd: #1a1e1fd9;
+    background-image: linear-gradient(180deg, var(--infoBoxBackgroundColorStart), var(--infoBoxBackgroundColorEnd));
+    border: 2px solid #cba467;
+    box-shadow: 2px 2px 6px 0 #0000004d;
+    display: grid;
+    gap: var(--rowGap) var(--columnGap);
+    grid-template-areas: "previewImage title title" "previewImage previewText previewText" "previewImage date linkToArticle";
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    padding-inline-end: var(--columnGap);
+    pointer-events: none;
+    position: relative;
+  }
+  .newsPreview .previewImage {
+    grid-area: previewImage;
+    position: relative;
+  }
+  .newsPreview .previewImage:after,
+  .newsPreview .previewImage:before {
+    background-color: var(--decorationColor, #cba467);
+    content: "";
+    position: absolute;
+    z-index: 2;
+  }
+  .newsPreview .previewImage:before {
+    inset-block: 0;
+    inset-inline-end: -1px;
+    width: 1px;
+  }
+  .newsPreview .previewImage:after {
+    height: 11px;
+    inset-block-start: 50%;
+    inset-inline-end: -6px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 11px;
+  }
+  .newsPreview .previewImage > * {
+    background-size: cover;
+    height: 160px;
+    width: 160px;
+  }
+  .newsPreview .previewImage .defaultPreviewImage {
+    background-image: url(/assets/news-preview-default.jpg);
+  }
+  .newsPreview .previewText,
+  .newsPreview .title {
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .newsPreview .title {
+    font-size: 16px;
+    grid-area: title;
+    -webkit-line-clamp: 2;
+    margin-block-end: 0;
+    padding-block-start: var(--rowGap);
+  }
+  .newsPreview .previewText {
+    grid-area: previewText;
+    -webkit-line-clamp: 3;
+  }
+  .newsPreview .date,
+  .newsPreview .linkToFullArticle {
+    align-self: end;
+    padding-block-end: var(--rowGap);
+  }
+  .newsPreview .date *,
+  .newsPreview .linkToFullArticle * {
+    white-space: nowrap;
+  }
+  .newsPreview .date {
+    font-size: 11px;
+    grid-area: date;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+  .newsPreview .date span {
+    font-style: italic;
+  }
+  .newsPreview .linkToFullArticle {
+    grid-area: linkToArticle;
+    justify-self: end;
+  }
+  .newsPreview .linkToFullArticle a {
+    align-items: center;
+    display: inline-grid;
+    gap: 5px;
+    grid-auto-flow: column;
+    pointer-events: auto;
+  }
+  .newsPreview .linkToFullArticle a svg {
+    width: 13px;
+  }
+  .newsPreview .linkToFullArticle .short {
+    display: none;
+  }
+}
+@layer views {
+  @container newsPreviewContainer (width < 500px) {
+    .newsPreview {
+      --columnGap: 15px;
+      --rowGap: 3px;
+    }
+    .newsPreview .previewImage > * {
+      height: 110px;
+      width: 110px;
+    }
+    .newsPreview .previewImage:after {
+      height: 9px;
+      inset-inline-end: -5px;
+      width: 9px;
+    }
+    .newsPreview .title {
+      padding-block-start: 5px;
+    }
+    .newsPreview .previewText {
+      -webkit-line-clamp: 2;
+    }
+  }
+  @container newsPreviewContainer (width < 450px) {
+    .newsPreview .linkToFullArticle .full {
+      display: none;
+    }
+    .newsPreview .linkToFullArticle .short {
+      display: block;
+    }
+  }
+  @container newsPreviewContainer (width < 385px) {
+    .newsPreview {
+      grid-template-areas: "previewImage title title" "previewImage date linkToArticle";
+      grid-template-rows: minmax(50%, auto) 1fr;
+      --columnGap: 10px;
+      --rowGap: 6px;
+      cursor: pointer;
+      padding-inline-end: 5px;
+      pointer-events: auto;
+    }
+    .newsPreview .previewImage > * {
+      height: 76px;
+      width: 76px;
+    }
+    .newsPreview .previewImage:after {
+      height: 7px;
+      inset-inline-end: -4px;
+      width: 7px;
+    }
+    .newsPreview .title {
+      align-self: center;
+    }
+    .newsPreview .previewText {
+      display: none;
+    }
+    .newsPreview .date {
+      font-size: 10px;
+      line-height: 16px;
+    }
+    .newsPreview .linkToFullArticle {
+      font-size: 11px;
+    }
+    .newsPreview .linkToFullArticle a {
+      pointer-events: none;
+    }
+  }
+}
+@layer views {
+  #news .newsArticle {
+    font-size: 15px;
+  }
+  #news .newsArticle .headerImage img {
+    width: 100%;
+  }
+  #news .newsArticle .defaultHeaderImage {
+    background-image: url(/assets/news-header-default.jpg);
+    background-position-x: center;
+    background-size: cover;
+    height: clamp(150px, 35cqi, 400px);
+    width: 100%;
+  }
+  #news .newsArticle .title {
+    font-size: 22px;
+    margin-block: clamp(10px, 2cqi, 20px) 0;
+    margin-inline: clamp(10px, 4cqi, 40px);
+  }
+  #news .newsArticle .date {
+    font-style: italic;
+    margin-block-start: 10px;
+    margin-inline: clamp(10px, 4cqi, 40px);
+  }
+  #news .newsArticle .fullArticle {
+    margin-block: clamp(10px, 2cqi, 20px) clamp(10px, 4cqi, 40px);
+    margin-inline: clamp(10px, 4cqi, 40px);
+  }
+  #news .newsArticle .fullArticle em {
+    font-style: italic;
+  }
+  #news .newsArticle .fullArticle ol,
+  #news .newsArticle .fullArticle ul {
+    margin-inline-start: clamp(15px, 3cqi, 25px);
+  }
+  #news .newsArticle .fullArticle ul li {
+    list-style: disc;
+  }
+  #news .newsArticle .fullArticle ol li {
+    list-style: decimal;
+  }
+  #news .newsArticle .fullArticle table {
+    font-size: var(--fontSize);
+    --fontColor: #000;
+  }
+  #news .newsArticle .fullArticle table thead {
+    border-block-end-width: 0 !important;
+  }
+  #news .newsArticle .fullArticle table td,
+  #news .newsArticle .fullArticle table th {
+    padding-block: 6px;
+    padding-inline: 10px;
+  }
+  #news .newsArticle .fullArticle table th {
+    background-color: #d2bda1;
+    border-color: #000;
+    font-weight: 700;
+  }
+  #news .newsArticle .fullArticle table td {
+    background-color: #f4efe4;
+    border: 1px solid #5e463a;
+  }
+  #languageSelection {
+    width: auto;
+  }
+  #languageSelection section {
+    grid-template-columns: 1fr;
+  }
+  #languageSelection .languages {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+  }
+  #languageSelection .languages.others {
+    border-image-repeat: repeat;
+    border-image-slice: 1 0 0;
+    border-image-source: linear-gradient(90deg, #67543b00, #67543b40, #67543b00);
+    border-image-width: auto;
+    margin-block-start: 20px;
+    padding-block-start: 20px;
+  }
+  #languageSelection label.text {
+    margin-block-end: 20px;
+    width: 100%;
+  }
+  #languageSelection .language {
+    padding-bottom: 8px;
+  }
+  #languageSelection .language .label {
+    align-items: center;
+    column-gap: 5px;
+    display: inline-grid;
+    font-weight: 400;
+    grid-auto-flow: column;
+    justify-self: start;
+  }
+  #languageSelection .language .label .flag {
+    border: 1px solid #777c;
+  }
+  #languageSelection .language .label .addition {
+    color: #777;
+    font-size: 0.9em;
+  }
+}
+@layer views {
+  @media screen and (max-width: 640px) {
+    #languageSelection {
+      padding-inline: var(--pagePadding);
+      width: 100%;
+    }
+    #languageSelection .languages {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@layer views {
+  #loginLobby label {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  #loginLobby label:not(.checkbox) .label {
+    color: #5e463a;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  #loginLobby label.checkbox {
+    padding-bottom: 0;
+  }
+  #loginLobby #recaptcha:not(:empty) {
+    display: grid;
+  }
+  #loginLobby #recaptcha:not(:empty) > div {
+    animation: captchaAppear 0.15s ease-out forwards;
+    display: grid;
+    grid-template-rows: 0fr;
+    justify-self: center;
+  }
+  @keyframes captchaAppear {
+    0% {
+      grid-template-rows: 0fr;
+      margin-bottom: 0;
+    }
+    to {
+      grid-template-rows: 1fr;
+      margin-bottom: 20px;
+    }
+  }
+  #loginLobby #recaptcha:not(:empty) > div.dummyCaptcha {
+    background-color: #f0f;
+    color: #fff;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 200px;
+  }
+  #loginLobby .actions {
+    text-align: center;
+  }
+  #loginLobby .actions button,
+  #loginLobby .actions > div:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  #registrationFlowWrapper {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: start;
+  }
+  #registrationFlowWrapper .step {
+    display: inline-grid;
+    grid-column: 1;
+    grid-template-columns: 0fr;
+    grid-template-rows: 0fr;
+    height: 0;
+    min-width: 320px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease-out, grid-template-rows 0.5s ease-in-out 0.25s,
+      grid-template-columns 0.5s ease-in-out 0.25s;
+  }
+  #registrationFlowWrapper .step.active {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.25s ease-out 0.5s, grid-template-rows 0.5s ease-in-out, grid-template-columns 0.5s ease-in-out;
+  }
+  #registrationFlowWrapper .legalText {
+    line-height: 1.4rem;
+    margin-block-end: 20px;
+    margin-block-start: 0;
+  }
+  #passwordRecovery button.back {
+    --translate: translateX(0);
+    margin-block-end: 20px;
+  }
+  #passwordRecovery button.back svg {
+    stroke: currentColor;
+    transform: var(--translate) rotate(calc(90deg * var(--scaleXFactor)));
+    transition: transform 0.2s ease-out 0.1s;
+    width: 1em;
+  }
+  #passwordRecovery button.back:hover {
+    --translate: translateX(calc(-2px * var(--scaleXFactor)));
+  }
+  #passwordRecovery label {
+    width: 100%;
+  }
+  #passwordRecovery .actions {
+    text-align: center;
+  }
+  #passwordRecovery .actions button {
+    margin-block-start: 20px;
+  }
+  #passwordRecovery .success.newPassword {
+    text-align: center;
+  }
+  #passwordRecovery .success > * {
+    animation: recoverSuccessAppear 0.15s ease-out forwards;
+    opacity: 0;
+  }
+  #passwordRecovery .success > :first-child {
+    animation-delay: 0s;
+  }
+  #passwordRecovery .success > :nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  #passwordRecovery .success > :nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  #passwordRecovery .success > :nth-child(4) {
+    animation-delay: 0.3s;
+  }
+}
+@layer views {
+}
+@layer views {
+  @keyframes recoverSuccessAppear {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #passwordRecovery .success h1 {
+    --fontSize: 24px;
+    line-height: 1em;
+  }
+  #passwordRecovery .success .successIconLarge {
+    display: inline-block;
+    fill: #228b22;
+    height: 60px;
+    width: 60px;
+  }
+}
+@layer views {
+  header:has(~ .withStage) {
+    background: linear-gradient(180deg, #4d4d4de6, #292929e6);
+  }
+  #main.withStage {
+    align-content: end;
+    min-height: calc(100vh - 80px);
+  }
+  #main.withStage:before {
+    background: #2c292c;
+  }
+  #main .ctaWrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: minmax(420px, 440px) minmax(420px, 460px) minmax(420px, 440px);
+    margin-block-end: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  #main .ctaWrapper .playNowCTAButton {
+    align-self: start;
+    justify-self: center;
+  }
+  #main .ctaWrapper .infoBoxWrapper {
+    align-items: stretch;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 1fr auto;
+    height: 162px;
+  }
+  #main .ctaWrapper .infoBoxWrapper .goldenFrame > div {
+    cursor: pointer;
+    pointer-events: auto;
+    transition-duration: 0.25s;
+    transition-property: --infoBoxBackgroundColorStart, --infoBoxBackgroundColorEnd, --decorationColor, --fontColor;
+  }
+  #main .ctaWrapper .infoBoxWrapper .goldenFrame > div:hover {
+    --infoBoxBackgroundColorStart: #cba467;
+    --infoBoxBackgroundColorEnd: #cba467;
+  }
+  #main .ctaWrapper .infoBoxWrapper .goldenFrame > div:active {
+    --infoBoxBackgroundColorStart: #9d763a;
+    --infoBoxBackgroundColorEnd: #9d763a;
+  }
+  #main .ctaWrapper .infoBoxWrapper .goldenFrame > div:active,
+  #main .ctaWrapper .infoBoxWrapper .goldenFrame > div:hover {
+    --decorationColor: var(--fontColor);
+    --fontColor: #1f1f1f;
+  }
+  #main .ctaWrapper .infoBoxWrapper .goldenFrame > div:active h3,
+  #main .ctaWrapper .infoBoxWrapper .goldenFrame > div:hover h3 {
+    --fontColor: #1f1f1f;
+  }
+  #main .ctaWrapper .infoBoxWrapper button {
+    justify-self: center;
+  }
+  #main .ctaWrapper .buttonSecondary {
+    min-width: 200px;
+  }
+  #main .ctaWrapper .buttonSecondary svg,
+  #main .ctaWrapper .newsPreview .linkToFullArticle {
+    display: none;
+  }
+  @media screen and (max-width: 1360px) {
+    #main .ctaWrapper {
+      grid-template-columns: minmax(420px, 500px) minmax(420px, 500px);
+      justify-content: center;
+    }
+    #main .ctaWrapper .playNowCTAButton {
+      grid-column: 1/-1;
+      grid-row-start: 1;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    #main .ctaWrapper {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: clamp(20px, 2vh, 33px);
+    }
+    #main .ctaWrapper .playNowCTAButton {
+      justify-self: center;
+      max-width: calc(100vw - 40px);
+    }
+    #main .ctaWrapper .infoBoxWrapper {
+      max-width: 500px;
+      width: 100%;
+    }
+    #main .ctaWrapper .goldenFrame {
+      padding: 0;
+    }
+    #main .ctaWrapper .goldenFrame > svg {
+      display: none;
+    }
+    #main .ctaWrapper .goldenFrame:before {
+      height: auto;
+      inset: -4px;
+      width: auto;
+    }
+    #main .ctaWrapper .buttonSecondary {
+      min-width: auto;
+      --buttonPadding: 8px;
+    }
+    #main .ctaWrapper .buttonSecondary span {
+      display: none;
+    }
+    #main .ctaWrapper .buttonSecondary svg {
+      display: block;
+      height: 20px;
+      width: 20px;
+    }
+    #main .ctaWrapper .infoBoxWrapper {
+      column-gap: max(12px, 4cqi);
+      grid-template-columns: 1fr auto;
+      height: 114px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    #main .ctaWrapper .infoBoxWrapper {
+      height: 80px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    #main .ctaWrapper .buttonSecondary {
+      --buttonPadding: 5px;
+    }
+  }
+}
+@layer views {
+  #imprint .contentWrapper {
+    padding: var(--pagePadding);
+  }
+  #imprint .contentWrapper :first-child {
+    margin-block-start: 0;
+  }
+  #imprint .contentWrapper :last-child {
+    margin-block-end: 0;
+  }
+  #imprint .contentWrapper h3 {
+    margin-block-end: 0;
+    margin-block-start: 1.5em;
+  }
+  #imprint .contentWrapper h3 + p {
+    margin-block-start: 0;
+  }
+  #imprint .contentWrapper p {
+    white-space: pre-line;
+  }
+  #gameRules .contentWrapper {
+    padding: var(--pagePadding);
+  }
+  #gameRules .contentWrapper > :first-child {
+    margin-block-start: 0;
+  }
+  #gameRules .contentWrapper > :last-child {
+    margin-block-end: 0;
+  }
+  #gameRules .contentWrapper h3 {
+    margin-block-end: 0;
+    margin-block-start: 1.5em;
+  }
+  #gameRules .contentWrapper h3 + p {
+    margin-block-start: 0;
+  }
+  #gameRules .contentWrapper p,
+  #gameRules .contentWrapper span {
+    white-space: pre-line;
+  }
+  #gameRules .contentWrapper strong {
+    font-size: 1.1em;
+  }
+  #gameRules .contentWrapper ul {
+    margin-inline-start: 26px;
+  }
+  #gameRules .contentWrapper ul li {
+    list-style: disc;
+    margin-block: 0.5em;
+  }
+  #referAFriendForwarding .choices {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 100%;
+    margin-block-start: 15px;
+  }
+  #referAFriendForwarding .choices > button,
+  #referAFriendForwarding .choices > div {
+    justify-self: center;
+  }
+}
+@layer views {
+}
+@layer views {
+}

@@ -1,0 +1,65 @@
+@property --fontSize {
+  syntax: "<length>";
+  initial-value: 13px;
+  inherits: true;
+}
+@property --fontColor {
+  syntax: "<color>";
+  initial-value: #e6dbc9;
+  inherits: true;
+}
+@property --scaleXFactor {
+  syntax: "<number>";
+  initial-value: 1;
+  inherits: true;
+}
+@property --focusColor {
+  syntax: "<color>";
+  initial-value: #0066ffb3;
+  inherits: true;
+}
+@property --disabledColor {
+  syntax: "<color>";
+  initial-value: #777;
+  inherits: true;
+}
+@property --negativeColor {
+  syntax: "<color>";
+  initial-value: #d40000;
+  inherits: true;
+}
+@property --positiveColor {
+  syntax: "<color>";
+  initial-value: #228b22;
+  inherits: true;
+}
+@property --pagePadding {
+  syntax: "<length>";
+  initial-value: 20px;
+  inherits: true;
+}
+@property --contentMaxWidth {
+  syntax: "<length>";
+  initial-value: 840px;
+  inherits: true;
+}
+@property --mobileBreakpoint {
+  syntax: "<length>";
+  initial-value: 640px;
+  inherits: true;
+}
+@property --contentMinWidth {
+  syntax: "<length>";
+  initial-value: 320px;
+  inherits: true;
+}
+@property --infoBoxBackgroundColorStart {
+  syntax: "<color>";
+  initial-value: #0000;
+  inherits: false;
+}
+@property --infoBoxBackgroundColorEnd {
+  syntax: "<color>";
+  initial-value: #0000;
+  inherits: false;
+}

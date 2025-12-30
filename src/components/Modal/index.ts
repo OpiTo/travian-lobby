@@ -1,0 +1,14 @@
+export { default as Modal } from './Modal';
+export { default as LoginModal } from './LoginModal';
+export { default as RegistrationModal } from './RegistrationModal';
+export { default as PasswordRecoveryModal } from './PasswordRecoveryModal';
+export { default as ModalManager } from './ModalManager';
+export { default as SocialLoginBlock } from './SocialLoginBlock';
+export { default as LanguageSelectionModal } from './LanguageSelectionModal';
+export { default as GoldTransferModal } from './GoldTransferModal';
+export { default as ActivationModal } from './ActivationModal';
+export { default as ActivationSocialModal } from './ActivationSocialModal';
+export { default as SetNewPasswordModal } from './SetNewPasswordModal';
+export { default as ErrorSocialModal } from './ErrorSocialModal';
+export { default as ReferAFriendModal } from './ReferAFriendModal';
+export { default as CalendarGameworldModal } from './CalendarGameworldModal';

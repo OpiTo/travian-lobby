@@ -1,0 +1,14 @@
+/* Base styles (layer declaration, properties, global) */
+@import './base/index.css';
+
+/* Component styles */
+@import './components/index.css';
+
+/* Layout styles */
+@import './layout/index.css';
+
+/* View/Page styles */
+@import './views/index.css';
+
+/* Flag sprites for language selector */
+@import './flags.css';

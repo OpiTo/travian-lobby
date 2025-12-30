@@ -1,0 +1,212 @@
+/**
+ * Flag icon styles
+ * Matches the original i.flag styles from startpage CSS
+ */
+
+i.flag {
+  background-size: cover;
+  display: inline-block;
+  height: 24px;
+  width: 31px;
+  --scaleXFactor: 1;
+}
+
+i.flag.ae {
+  background-image: url(/flags/ae.svg);
+}
+
+i.flag.ar {
+  background-image: url(/flags/ar.svg);
+}
+
+i.flag.arabia {
+  background-image: url(/flags/arabia.svg);
+}
+
+i.flag.au {
+  background-image: url(/flags/au.svg);
+}
+
+i.flag.ba {
+  background-image: url(/flags/ba.svg);
+}
+
+i.flag.bg {
+  background-image: url(/flags/bg.svg);
+}
+
+i.flag.br {
+  background-image: url(/flags/br.svg);
+}
+
+i.flag.china {
+  background-image: url(/flags/china.svg);
+}
+
+i.flag.cl {
+  background-image: url(/flags/cl.svg);
+}
+
+i.flag.cz {
+  background-image: url(/flags/cz.svg);
+}
+
+i.flag.de {
+  background-image: url(/flags/de.svg);
+}
+
+i.flag.dk {
+  background-image: url(/flags/dk.svg);
+}
+
+i.flag.ee {
+  background-image: url(/flags/ee.svg);
+}
+
+i.flag.eg {
+  background-image: url(/flags/eg.svg);
+}
+
+i.flag.es {
+  background-image: url(/flags/es.svg);
+}
+
+i.flag.fi {
+  background-image: url(/flags/fi.svg);
+}
+
+i.flag.fr {
+  background-image: url(/flags/fr.svg);
+}
+
+i.flag.gr {
+  background-image: url(/flags/gr.svg);
+}
+
+i.flag.hk {
+  background-image: url(/flags/hk.svg);
+}
+
+i.flag.hr {
+  background-image: url(/flags/hr.svg);
+}
+
+i.flag.hu {
+  background-image: url(/flags/hu.svg);
+}
+
+i.flag.id {
+  background-image: url(/flags/id.svg);
+}
+
+i.flag.il {
+  background-image: url(/flags/il.svg);
+}
+
+i.flag.international {
+  background-image: url(/flags/international.svg);
+}
+
+i.flag.ir {
+  background-image: url(/flags/ir.svg);
+}
+
+i.flag.it {
+  background-image: url(/flags/it.svg);
+}
+
+i.flag.jp {
+  background-image: url(/flags/jp.svg);
+}
+
+i.flag.lt {
+  background-image: url(/flags/lt.svg);
+}
+
+i.flag.lv {
+  background-image: url(/flags/lv.svg);
+}
+
+i.flag.ma {
+  background-image: url(/flags/ma.svg);
+}
+
+i.flag.mx {
+  background-image: url(/flags/mx.svg);
+}
+
+i.flag.my {
+  background-image: url(/flags/my.svg);
+}
+
+i.flag.nl {
+  background-image: url(/flags/nl.svg);
+}
+
+i.flag.no {
+  background-image: url(/flags/no.svg);
+}
+
+i.flag.nz {
+  background-image: url(/flags/nz.svg);
+}
+
+i.flag.pl {
+  background-image: url(/flags/pl.svg);
+}
+
+i.flag.pt {
+  background-image: url(/flags/pt.svg);
+}
+
+i.flag.ro {
+  background-image: url(/flags/ro.svg);
+}
+
+i.flag.rs {
+  background-image: url(/flags/rs.svg);
+}
+
+i.flag.ru {
+  background-image: url(/flags/ru.svg);
+}
+
+i.flag.sa {
+  background-image: url(/flags/sa.svg);
+}
+
+i.flag.se {
+  background-image: url(/flags/se.svg);
+}
+
+i.flag.si {
+  background-image: url(/flags/si.svg);
+}
+
+i.flag.sk {
+  background-image: url(/flags/sk.svg);
+}
+
+i.flag.th {
+  background-image: url(/flags/th.svg);
+}
+
+i.flag.tr {
+  background-image: url(/flags/tr.svg);
+}
+
+i.flag.tw {
+  background-image: url(/flags/tw.svg);
+}
+
+i.flag.uk {
+  background-image: url(/flags/uk.svg);
+}
+
+i.flag.us {
+  background-image: url(/flags/us.svg);
+}
+
+i.flag.vn {
+  background-image: url(/flags/vn.svg);
+}
